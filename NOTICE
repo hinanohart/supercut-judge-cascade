@@ -1,0 +1,25 @@
+supercut-judge-cascade
+Copyright 2024 supercut-judge-cascade contributors
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+---
+
+This product includes software and design patterns developed by
+supercut-judge-cascade contributors.
+
+Third-party components are listed in CREDITS.md with their respective licenses.
+
+The pre-trained ArcFace model weights (buffalo_l, distributed by InsightFace)
+are NOT included in this package and are subject to a separate non-commercial
+license.  See CREDITS.md and KNOWN_LIMITATIONS.md for details.
