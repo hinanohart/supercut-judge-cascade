@@ -7,7 +7,6 @@ import sys
 
 import pytest
 
-
 # ---------------------------------------------------------------------------
 # test_arcface_lazy_import
 # ---------------------------------------------------------------------------
@@ -38,9 +37,8 @@ def test_arcface_init_fails_no_weights():
     """ArcFaceEmbedder raises BackendUnavailableError or ValueError when weights absent."""
     # This test is only meaningful when insightface IS installed but weights are not.
     # Mark as network because downloading is required; skip gracefully if not installed.
-    try:
-        from insightface.app import FaceAnalysis  # type: ignore[import]
-    except ImportError:
+    import importlib.util
+    if importlib.util.find_spec("insightface") is None:
         pytest.skip("insightface not installed — skipping weight-absent test")
 
     from supercut_cascade.arcface import ArcFaceEmbedder
@@ -57,7 +55,6 @@ def test_arcface_init_fails_no_weights():
 
 def test_arcface_legal_notice():
     """arcface module docstring and ArcFaceEmbedder class docstring contain legal keywords."""
-    import importlib
     import inspect
 
     import supercut_cascade.arcface as arcface_mod

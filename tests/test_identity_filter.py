@@ -6,7 +6,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from supercut_cascade.exceptions import ConfigValidationError, IdentityFilterError
+from supercut_cascade.exceptions import IdentityFilterError
 from supercut_cascade.identity_filter import IdentityFilter
 
 
@@ -58,7 +58,7 @@ def test_identity_filter_random_threshold():
 # ---------------------------------------------------------------------------
 
 def test_identity_filter_empty_refs():
-    """IdentityFilter raises IdentityFilterError (a ConfigValidationError subtype) for empty refs."""
+    """IdentityFilter raises IdentityFilterError (a ConfigValidationError subtype)."""
     # IdentityFilterError is-a ConfigValidationError? Let's check the hierarchy.
     # According to exceptions.py: IdentityFilterError(SupercutCascadeError, RuntimeError)
     # ConfigValidationError(SupercutCascadeError, ValueError)

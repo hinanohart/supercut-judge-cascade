@@ -3,8 +3,6 @@
 """Tests for supercut_cascade.select (4 tests)."""
 from __future__ import annotations
 
-import pytest
-
 from supercut_cascade.select import Clip, per_mv_cap, temporal_nms
 
 
