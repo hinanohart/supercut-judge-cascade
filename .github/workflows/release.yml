@@ -54,6 +54,9 @@ jobs:
   publish:
     name: Publish to PyPI
     needs: build
+    # Gated: enable by setting repository variable PYPI_ENABLED=true
+    # AND registering PyPI Trusted Publisher (pypi.org → Manage → Publishing).
+    if: vars.PYPI_ENABLED == 'true'
     runs-on: ubuntu-latest
     environment: pypi
     permissions:
@@ -67,7 +70,8 @@ jobs:
 
   github-release:
     name: GitHub Release
-    needs: publish
+    needs: build
+    # Always publishes the GitHub Release (independent of PyPI).
     runs-on: ubuntu-latest
     permissions:
       contents: write

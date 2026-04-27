@@ -2,8 +2,9 @@
 # SPDX-License-Identifier: Apache-2.0
 """supercut-judge-cascade: pipeline for judge-cascade supercut generation."""
 
-from importlib.metadata import PackageNotFoundError, version as _v
 import logging
+from importlib.metadata import PackageNotFoundError
+from importlib.metadata import version as _v
 
 try:
     __version__ = _v("supercut-judge-cascade")
@@ -12,21 +13,21 @@ except PackageNotFoundError:
 
 logging.getLogger(__name__).addHandler(logging.NullHandler())
 
-from .exceptions import (  # noqa: E402
-    SupercutCascadeError,
-    BackendUnavailableError,
-    JudgeError,
-    IdentityFilterError,
-    ConfigValidationError,
-)
-from .judge import VisionLLMJudge, JudgeResult  # noqa: E402
-from .select import select_and_order  # noqa: E402
-from .qa import final_qa  # noqa: E402
 from .arcface import ArcFaceEmbedder  # noqa: E402
-from .identity_filter import IdentityFilter  # noqa: E402
 from .detect import detect_scenes  # noqa: E402
+from .exceptions import (  # noqa: E402
+    BackendUnavailableError,
+    ConfigValidationError,
+    IdentityFilterError,
+    JudgeError,
+    SupercutCascadeError,
+)
+from .identity_filter import IdentityFilter  # noqa: E402
+from .io import concat_clips, cut_clip, extract_frame, probe_duration  # noqa: E402
+from .judge import JudgeResult, VisionLLMJudge  # noqa: E402
+from .qa import final_qa  # noqa: E402
+from .select import select_and_order  # noqa: E402
 from .windows import Window, build_windows  # noqa: E402
-from .io import extract_frame, cut_clip, concat_clips, probe_duration  # noqa: E402
 
 __all__ = [
     "__version__",

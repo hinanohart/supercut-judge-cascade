@@ -143,7 +143,7 @@ def smoke_bucket_nms() -> None:
 # ---------------------------------------------------------------------------
 
 def smoke_judge_checkpoint() -> None:
-    from supercut_cascade.judge import JudgeResult, write_checkpoint, read_checkpoint, is_done
+    from supercut_cascade.judge import JudgeResult, is_done, read_checkpoint, write_checkpoint
 
     log.info("--- Judge checkpoint smoke ---")
     with tempfile.TemporaryDirectory() as tmpdir:

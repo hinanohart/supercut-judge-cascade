@@ -4,12 +4,9 @@
 from __future__ import annotations
 
 import dataclasses
-import json
 import sys
-from pathlib import Path
 
 import pytest
-
 
 # ---------------------------------------------------------------------------
 # test_judge_result_dataclass
@@ -54,7 +51,6 @@ def test_judge_lazy_litellm(monkeypatch):
 def test_judge_prompt_template_format():
     """_render_prompt replaces ${TARGET_LABEL} with the configured label."""
     # Import the private helper directly to test substitution without LLM
-    import importlib
     import types
 
     # Provide a stub litellm so VisionLLMJudge can be constructed

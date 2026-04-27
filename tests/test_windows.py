@@ -5,12 +5,8 @@ from __future__ import annotations
 
 import dataclasses
 import json
-from pathlib import Path
 
-import pytest
-
-from supercut_cascade.windows import Window, build_windows, plan_windows_from_segment
-
+from supercut_cascade.windows import Window, build_windows
 
 # ---------------------------------------------------------------------------
 # test_window_dataclass

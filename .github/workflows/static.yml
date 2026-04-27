@@ -18,6 +18,9 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    # Gated: enable by setting repository variable PAGES_ENABLED=true
+    # AND configuring Settings → Pages → Source: GitHub Actions.
+    if: vars.PAGES_ENABLED == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
