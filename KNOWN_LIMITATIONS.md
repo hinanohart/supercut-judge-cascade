@@ -41,10 +41,12 @@ repository.
 
 ---
 
-## 3. InsightFace Gender/Age Accuracy on Non-Western Subjects
+## 3. InsightFace Gender/Age Accuracy on East-Asian Subjects
 
 InsightFace's gender and age estimation models show a known ~15–20 % error rate
-on East-Asian female subjects in their 20s.  If you use these attributes as
+on East-Asian female subjects in their 20s — a documented bias of the underlying
+model that this project did not introduce. We surface it here so downstream users
+do not over-trust those attributes for filtering.  If you use these attributes as
 filters, use them as **soft penalties** (score reduction) rather than hard
 rejects to avoid systematic exclusion of valid frames.
 
