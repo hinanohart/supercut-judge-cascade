@@ -70,7 +70,7 @@ def check_ffmpeg() -> bool:
 def detect_scenes(video_path: Path) -> list[tuple[float, float]]:
     """Return list of (start_sec, end_sec) scene intervals using PySceneDetect."""
     try:
-        from scenedetect import detect, ContentDetector
+        from scenedetect import ContentDetector, detect
     except ImportError as exc:
         raise SystemExit(
             "scenedetect required: pip install 'supercut-judge-cascade[detect]'"
@@ -106,7 +106,6 @@ def extract_frame(video_path: Path, ts: float, tmpdir: Path) -> np.ndarray | Non
 
 def run_judge_c(judge, frames: list[np.ndarray], prompt_c: str, stable_id: str):
     """Run Stage C defect gate; return True if accepted."""
-    from supercut_cascade.judge import JudgeResult
     try:
         result = judge.judge(frames, prompt_c, stable_id=stable_id, phase="C")
         return result.verdict == "accept"

@@ -18,11 +18,15 @@ Public API
 from __future__ import annotations
 
 import logging
-from typing import Sequence
+from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
 import numpy as np
 
 from .exceptions import BackendUnavailableError
+
+if TYPE_CHECKING:
+    import insightface  # type: ignore[import]
 
 log = logging.getLogger(__name__)
 
@@ -36,7 +40,7 @@ def load_recognizer(
     providers: Sequence[str] | None = None,
     det_size: tuple[int, int] = (640, 640),
     det_thresh: float = 0.35,
-) -> "insightface.app.FaceAnalysis":  # type: ignore[name-defined]
+) -> insightface.app.FaceAnalysis:  # type: ignore[name-defined]
     """Initialise InsightFace ``buffalo_l`` with the recognition module.
 
     Parameters
@@ -86,7 +90,7 @@ def load_recognizer(
 
 
 def embed_image(
-    app: "insightface.app.FaceAnalysis",  # type: ignore[name-defined]
+    app: insightface.app.FaceAnalysis,  # type: ignore[name-defined]
     img_bgr: np.ndarray,
 ) -> np.ndarray | None:
     """Extract an ArcFace 512-D embedding from the largest detected face.

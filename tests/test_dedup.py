@@ -4,10 +4,8 @@
 from __future__ import annotations
 
 import numpy as np
-import pytest
 
 from supercut_cascade.dedup import compute_phash, phash_dedup
-
 
 # ---------------------------------------------------------------------------
 # test_compute_phash_shape
