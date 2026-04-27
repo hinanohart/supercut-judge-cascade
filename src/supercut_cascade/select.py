@@ -341,8 +341,8 @@ def select_and_order(
             if avg < judge_avg_min:
                 continue
         else:
-            # Draft fallback: deterministic hash score, no quality signal
-            h = int(hashlib.sha1(sid.encode()).hexdigest()[:8], 16)
+            # Draft fallback: deterministic per-sid pseudo-score (non-cryptographic).
+            h = int(hashlib.sha1(sid.encode(), usedforsecurity=False).hexdigest()[:8], 16)
             avg = 5.0 + (h % 1000) / 1000.0 * 4.0
             if avg < judge_avg_min:
                 continue
