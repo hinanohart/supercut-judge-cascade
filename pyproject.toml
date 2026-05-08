@@ -35,7 +35,7 @@ arcface = ["insightface>=0.7", "onnxruntime>=1.16"]
 detect = ["scenedetect>=0.6"]
 phash = ["imagehash>=4.3"]
 cluster = ["scikit-learn>=1.3"]
-vision = ["litellm>=1.40"]
+vision = ["litellm>=1.83.0,<2"]
 all = ["supercut-judge-cascade[arcface,detect,phash,cluster,vision]"]
 dev = ["pytest>=7", "pytest-cov", "pytest-mock", "ruff>=0.4", "hypothesis>=6"]
 
