@@ -61,7 +61,7 @@ def test_judge_prompt_template_format():
 
     judge = VisionLLMJudge.__new__(VisionLLMJudge)
     judge.model = "test-model"
-    judge.target_label = "HINATA"
+    judge.target_label = "TARGET_X"
     judge.max_tokens = 512
     judge.temperature = 0.0
     judge.timeout = 60.0
@@ -69,7 +69,7 @@ def test_judge_prompt_template_format():
 
     template = "Score this clip of ${TARGET_LABEL} on camera."
     rendered = judge._render_prompt(template)
-    assert "HINATA" in rendered, "TARGET_LABEL should be substituted"
+    assert "TARGET_X" in rendered, "TARGET_LABEL should be substituted"
     assert "${TARGET_LABEL}" not in rendered, "placeholder should be removed"
 
 
