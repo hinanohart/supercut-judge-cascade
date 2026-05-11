@@ -1,5 +1,5 @@
 # Copyright 2024 supercut-judge-cascade contributors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 """Window builder: convert detection JSONL records into candidate time windows.
 
 Two public helpers are provided:
