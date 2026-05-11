@@ -1,5 +1,5 @@
 # Copyright 2024 supercut-judge-cascade contributors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 """PySceneDetect content-detector wrapper for scene boundary detection.
 
 Requires the ``scenedetect`` extra::

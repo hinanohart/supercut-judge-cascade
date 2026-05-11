@@ -1,5 +1,5 @@
 # Copyright 2024 supercut-judge-cascade contributors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 """3-stage Vision LLM judge cascade (Cheap → Mid → Expensive).
 
 Stages

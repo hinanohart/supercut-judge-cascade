@@ -1,5 +1,5 @@
 # Copyright 2024 supercut-judge-cascade contributors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 """Tests for supercut_cascade.judge (5 tests, LLM mocked)."""
 from __future__ import annotations
 
