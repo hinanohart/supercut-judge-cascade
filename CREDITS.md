@@ -1,6 +1,6 @@
 # Credits and Third-Party Licenses
 
-`supercut-judge-cascade` itself is distributed under the **Apache License 2.0**
+`supercut-judge-cascade` itself is distributed under the **MIT License**
 (see `LICENSE`).  It depends on the following third-party components:
 
 ---
@@ -56,7 +56,7 @@ package.
 ## OpenCV (opencv-python)
 
 - Authors: OpenCV contributors
-- License: Apache 2.0
+- License: MIT
 - Source: https://github.com/opencv/opencv
 
 ---
