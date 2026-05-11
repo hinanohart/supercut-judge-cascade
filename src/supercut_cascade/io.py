@@ -1,5 +1,5 @@
 # Copyright 2024 supercut-judge-cascade contributors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 """FFmpeg subprocess wrapper for video I/O.
 
 All functions use ``subprocess.run`` with ``shell=False`` to prevent shell

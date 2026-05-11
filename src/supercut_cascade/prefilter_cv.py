@@ -1,5 +1,5 @@
 # Copyright 2024 supercut-judge-cascade contributors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 """OpenCV-based pre-filter: reject blurry, blacked-out, or washed-out frames.
 
 Requires ``opencv-python`` (``cv2``), which is a core dependency.

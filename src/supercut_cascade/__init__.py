@@ -1,5 +1,5 @@
 # Copyright 2024 supercut-judge-cascade contributors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 """supercut-judge-cascade: pipeline for judge-cascade supercut generation."""
 
 import logging

@@ -1,5 +1,5 @@
 # Copyright 2024 supercut-judge-cascade contributors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 """Perceptual-hash deduplication of candidate frames/windows.
 
 Uses a 64-bit DCT-based perceptual hash (pHash) computed with ``cv2.dct``
