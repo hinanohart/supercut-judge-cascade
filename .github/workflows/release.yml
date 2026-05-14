@@ -17,15 +17,23 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
       - name: Identity-leak guard (history-wide)
+        env:
+          FRAG_A: ${{ secrets.LEAK_FRAG_A }}
+          FRAG_B: ${{ secrets.LEAK_FRAG_B }}
+          FRAG_C: ${{ secrets.LEAK_FRAG_C }}
+          FRAG_D: ${{ secrets.LEAK_FRAG_D }}
+          FRAG_E: ${{ secrets.LEAK_FRAG_E }}
+          FRAG_F: ${{ secrets.LEAK_FRAG_F }}
+          FRAG_G: ${{ secrets.LEAK_FRAG_G }}
         run: |
           set -euo pipefail
-          FRAG_A='<REDACTED>'
-          FRAG_B='<REDACTED>'
-          FRAG_C='<REDACTED>'
-          FRAG_D='<REDACTED>'
-          FRAG_E='<REDACTED>'
-          FRAG_F='<REDACTED>'
-          FRAG_G='<REDACTED>'
+          : "${FRAG_A:?LEAK_FRAG_A not configured in repo secrets}"
+          : "${FRAG_B:?LEAK_FRAG_B not configured in repo secrets}"
+          : "${FRAG_C:?LEAK_FRAG_C not configured in repo secrets}"
+          : "${FRAG_D:?LEAK_FRAG_D not configured in repo secrets}"
+          : "${FRAG_E:?LEAK_FRAG_E not configured in repo secrets}"
+          : "${FRAG_F:?LEAK_FRAG_F not configured in repo secrets}"
+          : "${FRAG_G:?LEAK_FRAG_G not configured in repo secrets}"
           PATTERN="${FRAG_A}|${FRAG_B}|${FRAG_C}|${FRAG_D}|${FRAG_E}|${FRAG_F}|${FRAG_G}|/home/${FRAG_A}"
           FAIL=0
           REFS=$(git for-each-ref --format='%(refname)' refs/tags refs/heads refs/remotes)
