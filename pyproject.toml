@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "supercut-judge-cascade"
 version = "0.1.0"
 description = "Vision-LLM 3-stage judge cascade + ArcFace identity gating for video supercut generation"
-license = "Apache-2.0"
+license = "MIT"
 requires-python = ">=3.10"
 authors = [{ name = "hinanohart" }]
 keywords = [
@@ -15,7 +15,7 @@ keywords = [
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
-    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
