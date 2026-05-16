@@ -1,0 +1,4 @@
+
+# 2026-05-16 audit: Semgrep false-positive 除外
+# 動機: hashlib.sha1(..., usedforsecurity=False) を明示済 (deterministic pseudo-score、非暗号用途)
+src/supercut_cascade/select.py
