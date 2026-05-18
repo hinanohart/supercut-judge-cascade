@@ -1,5 +1,8 @@
 # supercut-judge-cascade
 
+[![CI](https://github.com/hinanohart/supercut-judge-cascade/actions/workflows/ci.yml/badge.svg)](https://github.com/hinanohart/supercut-judge-cascade/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+
 Vision-LLM 3-stage judge cascade for video supercuts — 95% prompt-cost reduction vs single-shot judging.
 
 ## Install
