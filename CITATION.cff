@@ -9,7 +9,7 @@ abstract: >
   supercut generation. Combines a cheap defect gate (Stage C), a mid-tier
   viewer-perspective scorer (Stage A), and an expensive editor-perspective
   scorer (Stage B) via litellm for provider-agnostic model access.
-license: Apache-2.0
+license: MIT
 repository-code: "https://github.com/example/supercut-judge-cascade"
 keywords:
   - video
